@@ -9,7 +9,7 @@
         <Image Source="TItuloPesquisaCEP.png" x:Name="Logo"/>
         <Entry Placeholder="Digite o CEP" PlaceholderColor="#00A6B2" BackgroundColor="#FFFFFF" x:Name="entCep" Keyboard="Numeric"/>
         <Button Text="Buscar" TextColor="#FFFFFF" BackgroundColor="#F87D28" x:Name="btnBuscar" Clicked="BtnBuscar_Clicked"/>
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" x:Name="txtResultado"/>
+        <Label Text="" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" x:Name="txtResultado"/>
         
     </StackLayout>
 
