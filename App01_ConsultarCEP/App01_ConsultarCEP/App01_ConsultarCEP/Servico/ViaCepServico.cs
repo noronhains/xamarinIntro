@@ -14,14 +14,24 @@ namespace App01_ConsultarCEP.Servico
         public static Endereco BuscarEnderecoViaCep(string cep)
         {
             string novoEnderecoURL = string.Format(EnderecoURL, cep);
-
+            string error = "";
             WebClient wc = new WebClient();
 
-            string conteudo = wc.DownloadString(novoEnderecoURL);
+            try
+            {
+                string conteudo = wc.DownloadString(novoEnderecoURL);
 
-            Endereco end = JsonConvert.DeserializeObject<Endereco>(conteudo);
+                Endereco end = JsonConvert.DeserializeObject<Endereco>(conteudo);
 
-            return end;
+                if (end.Cep == null) { return null; }
+
+                return end;
+
+            }catch(Exception ex)
+            {
+                error = ex.Message;
+                return null;
+            }
         }
     }
 }

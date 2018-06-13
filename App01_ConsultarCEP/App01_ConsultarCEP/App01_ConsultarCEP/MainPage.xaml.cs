@@ -52,12 +52,14 @@ namespace App01_ConsultarCEP
                                 
                 Endereco end = ViaCepServico.BuscarEnderecoViaCep(cep);
 
+                if (end == null) { throw new Exception("Verifique se todos os números estão corretos."); }
+
                 txtResultado.Text = string.Format("Endereço: {0} - {1}\nCidade: {2} - {3}", end.Logradouro, end.Bairro, end.Localidade, end.Uf);
 
             }
             catch(Exception ex)
             {
-                DisplayAlert(ex.Message, "CEP inválido", "Ok");
+                DisplayAlert("CEP inválido", ex.Message, "Ok");
                 return;
             }
             
