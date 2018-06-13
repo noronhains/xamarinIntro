@@ -15,7 +15,7 @@ namespace App01_ConsultarCEP
 
         private void BtnBuscar_Clicked(object sender, EventArgs e)
         {
-
+            if (entCep.Text == null) { return; }
             string cep = entCep.Text.Trim();
 
             try
