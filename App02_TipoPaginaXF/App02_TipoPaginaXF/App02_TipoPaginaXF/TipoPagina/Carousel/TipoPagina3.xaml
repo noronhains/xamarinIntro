@@ -7,7 +7,7 @@
         <StackLayout VerticalOptions="CenterAndExpand" >
             <Label Text="Tipo de página" TextColor="Blue"
                    HorizontalOptions="CenterAndExpand" />
-            <Button Image="image.jpg" BackgroundColor="Transparent"/>
+            <Button Image="image.jpg" BackgroundColor="Transparent" x:Name="btnAbrir" Clicked="BtnAbrir_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

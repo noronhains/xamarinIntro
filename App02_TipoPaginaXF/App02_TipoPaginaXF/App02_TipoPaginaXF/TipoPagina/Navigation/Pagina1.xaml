@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_TipoPaginaXF.TipoPagina.Navigation.Pagina1"
+             Title="Título da Navigation">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Pesquisa" Icon="Xamarin.jpg"/>
+        <ToolbarItem Text="Detalhes"/>
+        <ToolbarItem Text="Ordenar"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Eu sou uma Content Page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Ir para página 2" x:Name="btnIr" Clicked="BtnIr_Clicked"/>
+            <Button Text="Chamar modal" x:Name="btnModal" Clicked="BtnModal_Clicked"/>
+            <Button Text="Chamar MasterDetail" x:Name="btnMaster" Clicked="BtnMaster_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

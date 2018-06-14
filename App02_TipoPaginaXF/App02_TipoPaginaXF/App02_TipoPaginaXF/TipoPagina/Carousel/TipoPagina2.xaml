@@ -2,7 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App02_TipoPaginaXF.TipoPagina.Carousel.TipoPagina2"
-             BackgroundColor="LightSkyBlue">
+             BackgroundColor="LightSkyBlue"
+             Title="Título da Navigation">
+
+    <ContentPage.ToolbarItems Title="AAA">
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" >
             <Label Text="Tipo de página" TextColor="Blue"

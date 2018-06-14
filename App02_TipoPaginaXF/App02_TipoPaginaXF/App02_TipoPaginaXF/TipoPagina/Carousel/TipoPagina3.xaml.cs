@@ -16,5 +16,11 @@ namespace App02_TipoPaginaXF.TipoPagina.Carousel
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void BtnAbrir_Clicked(object sender, EventArgs e)
+        {
+            //App.Current.MainPage = new NavigationPage(new Navigation.Pagina1()) { BarBackgroundColor = Color.Purple };
+            App.Current.MainPage = new Tabbed.Abas();
+        }
+    }
 }
