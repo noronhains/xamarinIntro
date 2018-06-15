@@ -57,14 +57,20 @@ namespace xamarinSQLiteToJson
                 if (!string.IsNullOrEmpty(jsonPath))
                 {
                     string urlArquivoEnviar = "ftp://ftp.softwale.com.br" + "/testes/" + "expDados.json";
-                            FTP.EnviarArquivoFTP(jsonPath, urlArquivoEnviar, "usuario", "senha");
+                    if(FTP.EnviarArquivoFTP(jsonPath, urlArquivoEnviar, "usuario", "senha"))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
-                    
+                    return false; 
                 }
 
-                return true;
             }catch(Exception ex)
             {
                 string error = ex.Message;

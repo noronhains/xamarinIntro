@@ -13,7 +13,7 @@ namespace xamarinSQLiteToJson
         /// <param name="url"></param>
         /// <param name="usuario"></param>
         /// <param name="senha"></param>
-        public static void EnviarArquivoFTP(string arquivo, string url, string usuario, string senha)
+        public static bool EnviarArquivoFTP(string arquivo, string url, string usuario, string senha)
         {
             try
             {
@@ -39,10 +39,12 @@ namespace xamarinSQLiteToJson
                         }
                     }
                 }
-            }
+                return true;
+            }            
             catch (WebException e)
             {
                 String status = ((FtpWebResponse)e.Response).StatusDescription;
+                return false;
             }
         }
         /// <summary>

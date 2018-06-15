@@ -40,7 +40,14 @@ namespace xamarinSQLiteToJson
         {
             using (var dados = new AcessoBD())
             {
-                dados.ExportaJson();                
+                if (dados.ExportaJson())
+                {
+                    DisplayAlert("Enviado", "O arquivo foi enviado com sucesso para o ftp.", "Ok");
+                }
+                else
+                {
+                    DisplayAlert("Não enviado", "O arquivo o não foi enviado. Verifique sua conexão com a internet.", "Ok");
+                }
             }
         }
     }
