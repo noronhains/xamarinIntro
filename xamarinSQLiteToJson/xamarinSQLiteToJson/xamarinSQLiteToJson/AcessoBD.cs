@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using SQLite;
 using System.IO;
 using Xamarin.Forms;
@@ -51,6 +52,18 @@ namespace xamarinSQLiteToJson
                 String sandbox = System.Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
                 string jsonPath = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), "expDados.json");
                 File.WriteAllText(jsonPath, json);
+
+
+                if (!string.IsNullOrEmpty(jsonPath))
+                {
+                    string urlArquivoEnviar = "ftp://ftp.softwale.com.br" + "/testes/" + "expDados.json";
+                            FTP.EnviarArquivoFTP(jsonPath, urlArquivoEnviar, "usuario", "senha");
+                }
+                else
+                {
+                    
+                }
+
                 return true;
             }catch(Exception ex)
             {
@@ -58,7 +71,7 @@ namespace xamarinSQLiteToJson
                 return false;
             }
         }
-
+        
         public void Dispose()
         {
             conexaoSQLite.Dispose();

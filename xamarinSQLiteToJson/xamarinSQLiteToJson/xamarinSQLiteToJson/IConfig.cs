@@ -5,7 +5,7 @@ using SQLite;
 
 namespace xamarinSQLiteToJson
 {
-    interface IConfig
+    public interface IConfig
     {
         string DiretorioSQLite { get; }
         
