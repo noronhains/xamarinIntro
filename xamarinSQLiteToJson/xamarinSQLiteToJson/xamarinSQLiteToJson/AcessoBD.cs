@@ -41,7 +41,7 @@ namespace xamarinSQLiteToJson
 
         public List<Cliente> GetClientes()
         {
-            return conexaoSQLite.Table<Cliente>().OrderBy(c => c.Nome).ToList();
+            return conexaoSQLite.Table<Cliente>().OrderBy(c => c.Id).ToList();
         }
 
         public bool ExportaJson()
@@ -49,7 +49,6 @@ namespace xamarinSQLiteToJson
             try
             {
                 string json = JsonConvert.SerializeObject(GetClientes());
-                String sandbox = System.Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments);
                 string jsonPath = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), "expDados.json");
                 File.WriteAllText(jsonPath, json);
 
