@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarinSQLiteToJson.ClientesPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="20">
+            <Entry x:Name="NomeCliente" Placeholder="Nome" TextColor="Black"/>
+            <Entry x:Name="EmailCliente" Placeholder="Email" Keyboard="Email" TextColor="Black"/>
+            <StackLayout Orientation="Vertical">
+                <Button x:Name="Salvar" Text="Salvar Dados" Clicked="SalvarClick"/>
+                <Button x:Name="Exportar" Text="Exportar Json" Clicked="Exportar_Clicked"/>
+            </StackLayout>
+            <ListView x:Name="ListaCliente" BackgroundColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
