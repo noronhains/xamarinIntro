@@ -11,7 +11,7 @@ namespace xamarinSQLiteToJson
 		{
 			InitializeComponent();
 
-			MainPage = new ClientesPage();
+			MainPage = new NavigationPage(new ClientesPage());
 		}
 
 		protected override void OnStart ()
