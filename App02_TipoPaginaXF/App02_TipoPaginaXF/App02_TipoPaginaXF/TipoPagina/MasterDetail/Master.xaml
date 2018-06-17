@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:master="clr-namespace:App02_TipoPaginaXF.TipoPagina.MasterDetail"
+             x:Class="App02_TipoPaginaXF.TipoPagina.MasterDetail.Master">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Button Text="Página 1" BackgroundColor="Transparent" x:Name="btnPag1" Clicked="BtnPag1_Clicked"/>
+                <Button Text="Página 2" BackgroundColor="Transparent" x:Name="btnPag2" Clicked="BtnPag2_Clicked"/>
+                <Button Text="Conteúdo" BackgroundColor="Transparent" x:Name="btnCont" Clicked="BtnCont_Clicked"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <master:Conteudo/>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
