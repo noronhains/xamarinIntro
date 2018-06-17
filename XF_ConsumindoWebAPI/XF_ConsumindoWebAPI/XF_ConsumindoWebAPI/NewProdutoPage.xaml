@@ -5,7 +5,7 @@
 
     <ContentPage.Content>
 
-        <StackLayout Padding="20,0,20,0" Orientation="Horizontal">
+        <StackLayout Padding="20,0,20,0" Orientation="Vertical">
                 
                 <Entry x:Name="txtNome" Placeholder="Nome do produto"  HorizontalOptions="Start" FontSize="Small"/>
                 <Entry x:Name="txtCategoria" Placeholder="Categoria do produto" HorizontalOptions="Center" FontSize="Small" />

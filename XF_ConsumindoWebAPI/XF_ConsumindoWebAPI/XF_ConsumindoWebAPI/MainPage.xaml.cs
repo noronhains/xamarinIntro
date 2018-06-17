@@ -60,7 +60,7 @@ namespace XF_ConsumindoWebAPI
                     Produto produtoAtualizar = (Produto)mi.CommandParameter;
 
                     produtoAtualizar.Nome = txtNome.Text;
-                    produtoAtualizar.Categoria = txtCategoria.Text;
+                    produtoAtualizar.Descricao = txtCategoria.Text;
                     produtoAtualizar.Preco = Convert.ToDouble(txtPreco.Text);
 
                     await dataService.UpdateProdutoAsync(produtoAtualizar);
@@ -99,7 +99,7 @@ namespace XF_ConsumindoWebAPI
         {
             var produto = e.SelectedItem as Produto;
             txtNome.Text = produto.Nome;
-            txtCategoria.Text = produto.Categoria;
+            txtCategoria.Text = produto.Descricao;
             txtPreco.Text = produto.Preco.ToString();
         }
 
@@ -115,8 +115,9 @@ namespace XF_ConsumindoWebAPI
                 Produto novoProduto = new Produto
                 {
                     Nome = txtNome.Text.Trim(),
-                    Categoria = txtCategoria.Text.Trim(),
-                    Preco = Convert.ToDouble(txtPreco.Text)
+                    Descricao = txtCategoria.Text.Trim(),
+                    Preco = Convert.ToDouble(txtPreco.Text),
+                    Estoque = 5
                 };
                 try
                 {

@@ -2,7 +2,7 @@
 using XF_ConsumindoWebAPI.Models;
 using XF_ConsumindoWebAPI.Service;
 using System.Collections.Generic;
-
+using System.Data;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,13 +27,13 @@ namespace XF_ConsumindoWebAPI
                 Produto novoProduto = new Produto
                 {
                     Nome = txtNome.Text.Trim(),
-                    Categoria = txtCategoria.Text.Trim(),
-                    Preco = Convert.ToDouble(txtPreco.Text)
+                    Descricao = txtCategoria.Text.Trim(),
+                    Preco = Convert.ToDouble(txtPreco.Text),
+                    Estoque = Convert.ToInt16(txtPreco.Text)
                 };
                 try
-                {
-                    await dataService.AddProdutoAsync(novoProduto);
-                    await Navigation.PopAsync();
+                {                    
+                
                 }
                 catch (Exception ex)
                 {
@@ -57,6 +57,6 @@ namespace XF_ConsumindoWebAPI
                 return true;
             }
         }
-
+                
     }
 }
