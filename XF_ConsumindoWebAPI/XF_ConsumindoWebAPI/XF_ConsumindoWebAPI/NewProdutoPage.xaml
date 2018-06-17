@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_ConsumindoWebAPI.NewProdutoPage">
+
+    <ContentPage.Content>
+
+        <StackLayout Padding="20,0,20,0" Orientation="Horizontal">
+                
+                <Entry x:Name="txtNome" Placeholder="Nome do produto"  HorizontalOptions="Start" FontSize="Small"/>
+                <Entry x:Name="txtCategoria" Placeholder="Categoria do produto" HorizontalOptions="Center" FontSize="Small" />
+                <Entry x:Name="txtPreco" Placeholder="Preço do produto" HorizontalOptions="End" Keyboard="Numeric"
+                      FontSize="Small" />
+                <Button HorizontalOptions="CenterAndExpand" HeightRequest="80" WidthRequest="80" VerticalOptions="StartAndExpand" Text="Gravar" BackgroundColor="SkyBlue" BorderRadius="90" 
+                        Clicked="BtnAdicionar_Clicked" FontSize="Small"/>
+                
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
