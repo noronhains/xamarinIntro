@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XF_ConsumindoWebAPI_SQL"
+             x:Class="XF_ConsumindoWebAPI_SQL.MainPage"
+             Title="Produtos" Focused="ContentPage_Focused">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="refresh.png" Activated="ToolbarItem_Activated" x:Name="toolRefresh" Text="Refresh"/>
+        <!--<ToolbarItem Icon="add.png" Activated="ToolbarItem_Activated" x:Name="toolAdd" Text="Add"/>-->
+        <ToolbarItem Icon="clean.png" Activated="ToolbarItem_Activated" x:Name="toolClean" Text="Clean"/>        
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical" Padding="10,5,10,0">
+            <StackLayout Padding="20,10,20,0">
+                <Entry x:Name="txtNome" Placeholder="Nome do produto"  VerticalOptions="StartAndExpand" FontSize="Small"/>
+                <Entry x:Name="txtDescricao" Placeholder="Descrição do produto" VerticalOptions="StartAndExpand" FontSize="Small" />
+                <Entry x:Name="txtPreco" Placeholder="Preço do produto" VerticalOptions="StartAndExpand" Keyboard="Numeric"
+                      FontSize="Small" />
+                <Entry x:Name="txtEstoque" Placeholder="Quantidade do produto" VerticalOptions="StartAndExpand" Keyboard="Numeric"
+                      FontSize="Small" />
+                <Button HorizontalOptions="CenterAndExpand" HeightRequest="80" WidthRequest="80" VerticalOptions="StartAndExpand" Text="Gravar" BackgroundColor="SkyBlue" BorderRadius="90" 
+                        Clicked="BtnAdicionar_Clicked" FontSize="Small"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Padding="5,5,5,1">
+                <ListView x:Name="listaProdutos" ItemSelected="ListaProdutos_ItemSelected" BackgroundColor="LightSteelBlue" SeparatorColor="Blue">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="OnAtualizar" CommandParameter="{Binding .}" Icon="edit.png" />
+                                    <MenuItem Clicked="OnDeletar" CommandParameter="{Binding .}" Icon="delete.png" IsDestructive="True" />
+                                </ViewCell.ContextActions>
+                                <StackLayout Padding="3,3" Orientation="Horizontal">
+                                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                                        <Label Text="{Binding Nome, StringFormat='Nome: {0}'}" TextColor="Blue" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding Descricao, StringFormat='Desc.: {0}'}" TextColor="Blue" HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="End" Orientation="Vertical">
+                                        <Label Text="{Binding Preco, StringFormat='Preço: {0:C2}'}" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding Estoque, StringFormat='Quantidade: {0}' }" HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>        
+    </ContentPage.Content>
+    
+</ContentPage>
