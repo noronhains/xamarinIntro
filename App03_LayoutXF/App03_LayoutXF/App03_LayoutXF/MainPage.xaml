@@ -5,10 +5,11 @@
              x:Class="App03_LayoutXF.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button Text="Stack" Clicked="Button_Clicked"/>
+        <Button Text="Relative" Clicked="Button_Clicked"/>
+        <Button Text="Grid" Clicked="Button_Clicked"/>
+        <Button Text="Absolute" Clicked="Button_Clicked"/>
+        <Button Text="Scroll" Clicked="Button_Clicked"/>
     </StackLayout>
 
 </ContentPage>
