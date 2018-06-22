@@ -4,9 +4,15 @@
              x:Class="App04_UsandoLayoutsXF.Pages.Perfil1">
     <ContentPage.Content>
         <StackLayout Spacing="0">
-            <RelativeLayout VerticalOptions="Start" HeightRequest="300"
-                            BackgroundColor="Yellow">
-                
+            <RelativeLayout VerticalOptions="Start" HeightRequest="300">
+                <Image Source="Fundo.png" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                       />
+                <Image Source="Perfil.png" WidthRequest="120" 
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5, Constant=-60}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.2}" x:Name="imagemPerfil"/>
+                <Label Text="Miguel De Icaza"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, Factor=1, ElementName=imagemPerfil}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=X, Factor=1, Constant=180, ElementName=imagemPerfil}"/>
             </RelativeLayout>
             <Grid BackgroundColor="#0D1F2D" HeightRequest="120">
                 <Grid.ColumnDefinitions>

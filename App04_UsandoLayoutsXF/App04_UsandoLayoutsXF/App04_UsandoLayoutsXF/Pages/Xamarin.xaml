@@ -4,9 +4,18 @@
              x:Class="App04_UsandoLayoutsXF.Pages.Xamarin">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout BackgroundColor="#FFC926" Padding="30">
+                <Image Source="Logo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout HeightRequest="100" BackgroundColor="#0D1F2D" Padding="30">
+                <Label Text="Xamarin" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="48"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RelativeLayout>
+                    
+                </RelativeLayout>
+                <Label Text="Empresa" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="48"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
