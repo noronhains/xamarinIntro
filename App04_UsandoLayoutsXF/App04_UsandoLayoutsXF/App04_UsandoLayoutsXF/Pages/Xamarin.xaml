@@ -12,7 +12,9 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <RelativeLayout>
-                    
+                    <BoxView/>
+                    <BoxView/>
+                    <BoxView/>
                 </RelativeLayout>
                 <Label Text="Empresa" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="48"/>
             </StackLayout>
