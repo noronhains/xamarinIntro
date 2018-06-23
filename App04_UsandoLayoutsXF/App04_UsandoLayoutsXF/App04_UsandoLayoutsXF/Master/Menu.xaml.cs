@@ -21,11 +21,13 @@ namespace App04_UsandoLayoutsXF.Master
         {
             if(((Button)sender).Text == "Miguel de Icaza")
             {
-                Navigation.PushAsync(new Pages.Perfil1());
+                Detail = new NavigationPage(new Pages.Perfil1());
+                this.IsPresented = false;
             }
             else if (((Button)sender).Text == "Sobre a Xamarin")
             {
-                Navigation.PushAsync(new Pages.Xamarin());
+                Detail = new NavigationPage(new Pages.Xamarin());
+                this.IsPresented = false;
             }           
                 
         }
