@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App05_ControlesXF.Controles.LabelPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms! Welcome to Xamarin.Forms!"
+                   TextColor="White" 
+                   BackgroundColor="Black"
+                   FontFamily="Calibri"
+                   FontSize="Medium"
+                   FontAttributes="Italic"
+                   LineBreakMode="WordWrap"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -5,7 +5,7 @@
              x:Class="App04_UsandoLayoutsXF.Master.Menu">
 
     <MasterDetailPage.Master>
-        <ContentPage Title="Menu" BackgroundColor="#0D1F2D">
+        <ContentPage Title="Menu" BackgroundColor="#29b7e7">
             <StackLayout>
                 <StackLayout BackgroundColor="#FFC926" Padding="30">
                     <Image Source="Logo.png" VerticalOptions="Center" HorizontalOptions="Center"/>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App05_ControlesXF.Controles.ButtonPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Click me!" 
+                    TextColor="Blue"
+                    FontSize="24"
+                    BorderColor="Red"
+                    BorderRadius="20"
+                    BorderWidth="5"
+                    BackgroundColor="White"/>
+            <Button Text="Click me!" />
+            <Button Image="btn.png" BackgroundColor="Transparent" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center"/>   
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
