@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XF_TableView1"
+             x:Class="XF_TableView1.MainPage"
+             Title="Monte seu Veículo">
+
+    <StackLayout Padding="10">
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Acessórios">
+                    <SwitchCell Text="Ar condicionado digital" On="True"/>
+                    <SwitchCell Text="Alarme Perimétrico"/>
+                    <SwitchCell Text="Direção Eletro-Hidráulica"/>
+                    <SwitchCell x:Name="AlertaCinto" Text="Alerta Cinto de Segurança" OnChanged="AlertaCinto_Changed"/>
+                    <TextCell Text="Valor Total: 65.900,00" TextColor="Black"/>
+                    <EntryCell Placeholder="Informe seu nome"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button x:Name="btnProximo" Text="Avançar" VerticalOptions="End"/>
+    </StackLayout>
+
+</ContentPage>

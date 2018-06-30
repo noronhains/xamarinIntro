@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGasolina.Views.Detalhes"
+             Title="Detalhes">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Voltar" Clicked="Voltar_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label x:Name="lblData" VerticalOptions="Start" HorizontalOptions="Fill" TextColor="Salmon" FontSize="Large"/>
+            <Label x:Name="lblPosto" VerticalOptions="Start" HorizontalOptions="Fill" FontSize="Medium"/>
+            <Label x:Name="lblPreco" VerticalOptions="Start" HorizontalOptions="Fill" FontSize="Medium"/>
+            <Label x:Name="lblLitro" VerticalOptions="Start" HorizontalOptions="Fill" FontSize="Medium"/>
+            <Label x:Name="lblQuilometragem" VerticalOptions="Start" HorizontalOptions="Fill" FontSize="Medium"/>
+            <Label x:Name="lblValor" VerticalOptions="Start" HorizontalOptions="Fill" FontSize="Medium"/>
+            <Label x:Name="lblKmL" VerticalOptions="Start" HorizontalOptions="Fill" FontSize="Medium"/>
+            <Button x:Name="btnDeletar" Text="Deletar" BackgroundColor="Red" TextColor="White" Clicked="BtnDeletar_Clicked" VerticalOptions="Start" HorizontalOptions="Start"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

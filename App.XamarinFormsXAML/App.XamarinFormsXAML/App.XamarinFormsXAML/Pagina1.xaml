@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.XamarinFormsXAML.Pagina1" Title="Usando XAML" BackgroundColor="Green" Padding="10, 40, 10, 10">
+
+    <StackLayout>
+        <Label Text="Igor Noronha" 
+           VerticalOptions="Start" 
+           HorizontalTextAlignment="Center" 
+           Rotation="-15" 
+           IsVisible="True" 
+           FontSize="Large" 
+           FontAttributes="Bold" 
+           TextColor="Yellow" />
+
+        <Slider VerticalOptions="CenterAndExpand"
+                ValueChanged="OnSliderValueChanged"/>
+
+        <Label x:Name="lblValor"
+               Text=""
+               Font="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+
+        <Label Text="Igor Noronha"
+               Font="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+
+        <Button Text="Clique Aqui!"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnButtonClicked"/>
+
+    </StackLayout>
+    
+</ContentPage>

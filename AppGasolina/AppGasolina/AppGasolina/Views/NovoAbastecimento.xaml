@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGasolina.Views.NovoAbastecimento"
+             Title="Novo Abastecimento">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Data abastecimento" FontSize="Medium" />
+            <DatePicker x:Name="dtAbastecimento"/>
+            <Entry x:Name="entryPosto"  Placeholder="Posto abastecido" FontSize="Small" />
+            <Entry x:Name="entryValor" Keyboard="Numeric" Placeholder="Valor abastecido" FontSize="Small" />
+            <Entry x:Name="entryPreco" Keyboard="Numeric" Placeholder="Preço do litro" FontSize="Small" />
+            <Entry x:Name="entryLitros" Keyboard="Numeric" Placeholder="Litros abastecido" FontSize="Small" />
+            <Entry x:Name="entryQuilometragem" Keyboard="Numeric" Placeholder="Quilometragem rodada desde o último abastecimento" FontSize="Small" />
+            <Button x:Name="btnSalvar" Text="Salvar" FontSize="Small" Clicked="BtnSalvar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

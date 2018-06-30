@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGasolina.Views.Historico"
+             Title="Histórico">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstHistorico" BackgroundColor="White" ItemTapped="LstHistorico_ItemTapped"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XF_SearchBar"
+             x:Class="XF_SearchBar.MainPage"
+             BackgroundColor="WhiteSmoke"
+             Title="Lista de Estados">
+
+    <StackLayout Orientation="Vertical" Padding="10">
+
+        <Label Text="Procurar estado" FontSize="Medium"/>
+
+        <SearchBar x:Name="SearchConteudo" 
+                   TextChanged="SearchConteudo_TextChanged"/>
+
+        <Grid>
+            
+            <ListView x:Name="listaEstados" 
+                      ItemTapped="ListaEstados_ItemTapped"/>
+            
+        </Grid>
+        
+    </StackLayout>
+
+</ContentPage>

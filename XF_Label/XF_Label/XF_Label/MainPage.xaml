@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XF_Label"
+             x:Class="XF_Label.MainPage">
+
+    <StackLayout Padding="5,10">
+        <Label HorizontalOptions="Center" VerticalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Seja bem-viado ao " ForegroundColor="Red" FontAttributes="None" FontSize="Large"/>
+                    <Span Text="INSoft" ForegroundColor="Blue" FontAttributes="Bold" FontSize="Large"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
