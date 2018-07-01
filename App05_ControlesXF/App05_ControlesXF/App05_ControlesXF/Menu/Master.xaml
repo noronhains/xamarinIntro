@@ -20,6 +20,7 @@
                     <Button Text="SearchBar" Clicked="Button_Clicked"/>
                     <Button Text="SliderStepper" Clicked="Button_Clicked"/>
                     <Button Text="Switch" Clicked="Button_Clicked"/>
+                    <Button Text="Image" Clicked="Button_Clicked"/>
                 </StackLayout>
             </ScrollView>
         </ContentPage>

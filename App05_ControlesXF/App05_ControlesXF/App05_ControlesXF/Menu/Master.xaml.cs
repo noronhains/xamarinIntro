@@ -74,6 +74,11 @@ namespace App05_ControlesXF.Menu
                 Detail = new NavigationPage(new Controles.SwitchPage());
                 this.IsPresented = false;
             }
+            else if (((Button)sender).Text == "Image")
+            {
+                Detail = new NavigationPage(new Controles.ImagePage());
+                this.IsPresented = false;
+            }
         }
     }
 }
