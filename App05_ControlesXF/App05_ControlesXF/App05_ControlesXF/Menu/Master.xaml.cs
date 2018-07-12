@@ -79,6 +79,16 @@ namespace App05_ControlesXF.Menu
                 Detail = new NavigationPage(new Controles.ImagePage());
                 this.IsPresented = false;
             }
+            else if (((Button)sender).Text == "ListView")
+            {
+                Detail = new NavigationPage(new Controles.ListViewPage());
+                this.IsPresented = false;
+            }
+            else if (((Button)sender).Text == "TableView")
+            {
+                Detail = new NavigationPage(new Controles.TableViewPage());
+                this.IsPresented = false;
+            }
         }
     }
 }

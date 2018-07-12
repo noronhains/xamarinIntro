@@ -15,6 +15,19 @@ namespace App05_ControlesXF.Controles
 		public ImagePage ()
 		{
 			InitializeComponent ();
-		}
+
+            Image imgURL = new Image();
+
+            if (Device.RuntimePlatform == Device.UWP)
+            {
+                imgURL.Source = ImageSource.FromFile("Imagem/usb.jpg");
+            }
+            else
+            {
+                imgURL.Source = ImageSource.FromFile("usb.jpg");
+            }
+
+            Container.Children.Add(imgURL);
+        }
 	}
 }

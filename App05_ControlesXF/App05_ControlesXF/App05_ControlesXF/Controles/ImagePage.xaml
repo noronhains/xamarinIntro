@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App05_ControlesXF.Controles.ImagePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Image />
+        <StackLayout x:Name="Container">
+            <Image Source="https://company-profile-images.s3.amazonaws.com/images/71381/1182886/logo/carrefour-logo.png"
+                   Aspect="Fill"
+                   IsOpaque="True"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

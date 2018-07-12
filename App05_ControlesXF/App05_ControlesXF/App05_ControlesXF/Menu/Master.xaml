@@ -21,6 +21,8 @@
                     <Button Text="SliderStepper" Clicked="Button_Clicked"/>
                     <Button Text="Switch" Clicked="Button_Clicked"/>
                     <Button Text="Image" Clicked="Button_Clicked"/>
+                    <Button Text="ListView" Clicked="Button_Clicked"/>
+                    <Button Text="TableView" Clicked="Button_Clicked"/>
                 </StackLayout>
             </ScrollView>
         </ContentPage>
