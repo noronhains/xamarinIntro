@@ -23,6 +23,7 @@
                     <Button Text="Image" Clicked="Button_Clicked"/>
                     <Button Text="ListView" Clicked="Button_Clicked"/>
                     <Button Text="TableView" Clicked="Button_Clicked"/>
+                    <Button Text="WebView" Clicked="Button_Clicked"/>
                 </StackLayout>
             </ScrollView>
         </ContentPage>

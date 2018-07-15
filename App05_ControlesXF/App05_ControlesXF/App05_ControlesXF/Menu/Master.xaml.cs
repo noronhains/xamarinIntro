@@ -89,6 +89,11 @@ namespace App05_ControlesXF.Menu
                 Detail = new NavigationPage(new Controles.TableViewPage());
                 this.IsPresented = false;
             }
+            else if (((Button)sender).Text == "WebView")
+            {
+                Detail = new NavigationPage(new Controles.WebViewPage());
+                this.IsPresented = false;
+            }
         }
     }
 }

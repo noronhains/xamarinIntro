@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App05_ControlesXF.Controles.WebViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="2">
+                <Entry x:Name="txtUrl" Placeholder="Entre com o site aqui" HorizontalOptions="FillAndExpand" Completed="txtUrl_Completed"/>
+                <Button Text="Ir" Clicked="Button_Clicked_Ir" WidthRequest="50"/>
+                <Button Text="Voltar" Clicked="Button_Clicked_Voltar"/>
+                <Button Text="Próximo" Clicked="Button_Clicked_Prox"/>
+            </StackLayout>
+            <WebView 
+                Source="https://www.google.com"
+                Navigated="webV_Navigated"
+                Navigating="webV_Navigating"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand" 
+                x:Name="webV">
+                
+            </WebView>
+            <Label x:Name="lblStatus"/> 
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
