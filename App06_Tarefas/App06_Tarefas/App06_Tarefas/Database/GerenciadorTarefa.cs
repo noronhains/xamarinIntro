@@ -10,6 +10,7 @@ namespace App06_Tarefas.Database
 
         public void Salvar(Tarefa tarefa)
         {
+            Lista = Listagem();
             Lista.Add(tarefa);
             SalvarProperties(Lista);
         }
@@ -22,6 +23,7 @@ namespace App06_Tarefas.Database
 
         public void Finalizar(int index, Tarefa tarefa)
         {
+            Lista = Listagem();
             Lista.RemoveAt(index);
             Lista.Add(tarefa);
             SalvarProperties(Lista);
