@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using App06_Tarefas.Models;
+using Newtonsoft.Json;
 namespace App06_Tarefas.Database
 {
     public class GerenciadorTarefa
@@ -40,15 +41,20 @@ namespace App06_Tarefas.Database
             {
                 App.Current.Properties.Remove("Tarefas");
             }
-            App.Current.Properties.Add("Tarefas", Lista);
+
+            string JsonVal = JsonConvert.SerializeObject(lista);
+
+            App.Current.Properties.Add("Tarefas", JsonVal);
         }
         
         private List<Tarefa> ListagemProperties()
         {
             if (App.Current.Properties.ContainsKey("Tarefas"))
             {
-                return (List<Tarefa>)App.Current.Properties["Tarefas"];
-            }
+                string JsonVal = (string)App.Current.Properties["Tarefas"];
+                List<Tarefa> lista = JsonConvert.DeserializeObject<List<Tarefa>>(JsonVal);
+                return lista;
+            } 
             return new List<Tarefa>();
         }
 

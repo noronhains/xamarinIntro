@@ -12,7 +12,7 @@
             
             <StackLayout x:Name="SLTarefas">
             
-                <StackLayout Orientation="Horizontal" Spacing="15">
+                <!--<StackLayout Orientation="Horizontal" Spacing="15">
                     <Image VerticalOptions="Center">
                         <Image.Source>
                             <OnPlatform x:TypeArguments="ImageSource">
@@ -68,7 +68,7 @@
                             </OnPlatform>
                         </Image.Source>
                     </Image>
-                </StackLayout>
+                </StackLayout>-->
             </StackLayout>
 
             <Button HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="Button_Clicked">
