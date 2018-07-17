@@ -69,6 +69,11 @@ namespace App05_ControlesXF.Menu
                 Detail = new NavigationPage(new Controles.SearchBarPage());
                 this.IsPresented = false;
             }
+            else if (((Button)sender).Text == "SliderStepper")
+            {
+                Detail = new NavigationPage(new Controles.SliderStepperPage());
+                this.IsPresented = false;
+            }
             else if (((Button)sender).Text == "Switch")
             {
                 Detail = new NavigationPage(new Controles.SwitchPage());
