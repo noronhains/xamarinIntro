@@ -28,12 +28,22 @@ namespace App06_Tarefas.Views
             Navigation.PushAsync(new Cadastro());
         }
 
-        public void LinhaStackLayout(Tarefa tarefa)
+        public void LinhaStackLayout(Tarefa tarefa, int index)
         {
 
             Image imgDelete = new Image() { VerticalOptions = LayoutOptions.Center, Source = ImageSource.FromFile("Delete.png") };
             if (Device.RuntimePlatform == Device.UWP)
                 imgDelete.Source = ImageSource.FromFile("Resources/Delete.png");
+
+            TapGestureRecognizer DeleteTap = new TapGestureRecognizer();
+
+            DeleteTap.Tapped += delegate
+            {
+                new GerenciadorTarefa().Remover(index);
+                CarregaTarefas();
+            };
+
+            imgDelete.GestureRecognizers.Add(DeleteTap);
 
             Image imgPrioridade = new Image() { VerticalOptions = LayoutOptions.Center, Source = ImageSource.FromFile("p" + tarefa.Prioridade + ".png") };
             if (Device.RuntimePlatform == Device.UWP)
@@ -51,10 +61,30 @@ namespace App06_Tarefas.Views
                 ((StackLayout)stackLabel).Children.Add(new Label() { Text = "Finalizado em " + tarefa.DataFinalizacao.Value.ToString("dd/MM/yyyy - hh:mm") + "h", TextColor = Color.Gray, FontSize = 10 });
             }
 
-            Image imgCheck = new Image() { VerticalOptions = LayoutOptions.Center, Source = ImageSource.FromFile("CheckOff.png")};
+            string imgName;
+            if (tarefa.DataFinalizacao == null)
+            {
+                imgName = "CheckOff";
+            }
+            else
+            {
+                imgName = "CheckOn";
+            }
+
+            Image imgCheck = new Image() { VerticalOptions = LayoutOptions.Center, Source = ImageSource.FromFile(imgName + ".png")};
             if(Device.RuntimePlatform == Device.UWP)
-                imgCheck.Source = ImageSource.FromFile("Resources/CheckOff.png");
-                
+                imgCheck.Source = ImageSource.FromFile("Resources/" + imgName + ".png");
+
+            TapGestureRecognizer CheckTap = new TapGestureRecognizer();
+
+            CheckTap.Tapped += delegate
+            {
+                new GerenciadorTarefa().Finalizar(index, tarefa);
+                CarregaTarefas();
+            };
+
+            imgCheck.GestureRecognizers.Add(CheckTap);
+
             StackLayout linha = new StackLayout() { Orientation = StackOrientation.Horizontal, Spacing = 15 };
 
             linha.Children.Add(imgCheck);
@@ -73,9 +103,11 @@ namespace App06_Tarefas.Views
             List<Tarefa> lista = new List<Tarefa>();
             GerenciadorTarefa gerenciador = new GerenciadorTarefa();
             lista = gerenciador.Listagem();
+            int index = 0;
             foreach (Tarefa tarefa in lista)
             {
-                LinhaStackLayout(tarefa);
+                LinhaStackLayout(tarefa, index);
+                index++;
             } 
         }
 

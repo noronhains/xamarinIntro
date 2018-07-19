@@ -16,9 +16,10 @@ namespace App06_Tarefas.Database
             SalvarProperties(Lista);
         }
 
-        public void Remover(Tarefa tarefa)
+        public void Remover(int index)
         {
-            Lista.Remove(tarefa);
+            Lista = Listagem();
+            Lista.RemoveAt(index);
             SalvarProperties(Lista);
         }
 
@@ -26,6 +27,14 @@ namespace App06_Tarefas.Database
         {
             Lista = Listagem();
             Lista.RemoveAt(index);
+            if (tarefa.DataFinalizacao == null)
+            {
+                tarefa.DataFinalizacao = DateTime.Now;
+            }
+            else
+            {
+                tarefa.DataFinalizacao = null;
+            }
             Lista.Add(tarefa);
             SalvarProperties(Lista);
         }
