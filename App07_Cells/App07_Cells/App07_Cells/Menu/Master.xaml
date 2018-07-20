@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App07_Cells.Pagina"     
+             x:Class="App07_Cells.Menu.Master">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Button Text="TextCell" Clicked="Button_Clicked"/>
+                <Button Text="ImageCell" Clicked="Button_Clicked"/>
+                <Button Text="EntryCell" Clicked="Button_Clicked"/>
+                <Button Text="SwitchCell" Clicked="Button_Clicked"/>
+                <Button Text="ViewCell" Clicked="Button_Clicked"/>
+                <Button Text="ListView" Clicked="Button_Clicked"/>
+                <Button Text="ListViewButton" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:TextCellPage/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

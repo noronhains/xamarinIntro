@@ -156,10 +156,4 @@
       <Name>App07_Cells</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\CheckOff.png" />
-  </ItemGroup>
 </Project>
