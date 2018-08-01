@@ -48,7 +48,7 @@
                             </OnPlatform>
                         </Image.Source>
                     </Image>
-                    <Label Text="Nâo urgente e importante" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Não urgente e importante" TextColor="Gray" HorizontalOptions="FillAndExpand"/>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </StackLayout.GestureRecognizers>
